@@ -11,10 +11,12 @@ const app = express();
 const { MONGO_URI } = process.env;
 // connect database
 
+const connectionParams = {
+  autoIndex:false,
+  dbName:process.env.DATABASE_NAME
+}
 mongoose
-  .connect(MONGO_URI, {
-
-  })
+  .connect(MONGO_URI, connectionParams)
   .then(() => {
     console.log("Successfully connected to database");
   })
