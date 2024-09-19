@@ -47,6 +47,6 @@ const rootRouter = Router();
 
 rootRouter.use(waitlistRouter);
 
-app.use("/api/v1/", rootRouter);
+app.use("/api/v1", rootRouter);
 
 export default app;
