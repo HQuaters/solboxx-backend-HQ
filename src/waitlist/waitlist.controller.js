@@ -8,7 +8,7 @@ class WaitlistController {
 
   async addWaitlist(req, res) {
 
-    let waitlistEmail = await WaitlistModel.findOne({email:email})
+    let waitlistEmail = await WaitlistModel.findOne({email:req.body.email})
     if(waitlistEmail){
        return res.status(400).json("Email already exists")
     }
