@@ -5,5 +5,6 @@ const waitlistRouter = Router();
 const waitlistController = new WaitlistController();
 
 waitlistRouter.post("/join-waitlist", waitlistController.addWaitlist);
+waitlistRouter.get("/get-ref-details",waitlistController.getReferralDetails)
 
 export default waitlistRouter;
